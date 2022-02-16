@@ -1,5 +1,9 @@
 /* Utility Class */
 
+body {
+  font-family: "PT Sans", sans-serif;
+}
+
 header a,
 nav a {
   color: #000;
@@ -56,5 +60,13 @@ main a {
 }
 
 main p {
-  font-size: 15px;
+  font-size: 16px;
+}
+
+main ol {
+  padding-left: 2rem;
+}
+
+main ol li {
+  padding: 8px 0;
 }

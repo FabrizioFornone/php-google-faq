@@ -32,10 +32,14 @@ $db = [
         'title' => 'Perché il mio account è associato a un paese?',
         'paragraphs' => [
             'Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:',
-            'La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:',
-            'Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell\'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.',
-            'Google LLC, con sede negli Stati Uniti, per il resto del mondo.',
-            'La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.',
+            '<ol> 
+              <li> La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti: </li>
+               <ol type="a"> 
+                <li> Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell\'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera. </li>
+                <li> Google LLC, con sede negli Stati Uniti, per il resto del mondo. </li>
+               </ol>
+              <li> La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali. </li>
+            </ol>',
             'Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.'
         ]
     ],
@@ -74,6 +78,9 @@ $db = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
@@ -90,7 +97,7 @@ $db = [
                     <img class="img-fluid" src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
                 </div>
                 <!-- Privacy title -->
-                <div class="px-2 fs-5 fw-bold text-secondary privacy">Privacy e termini</div>
+                <div class="px-2 fs-5 text-secondary privacy">Privacy e termini</div>
             </div>
             <div class="d-flex align-items-center">
                 <div class="px-3">
@@ -124,20 +131,28 @@ $db = [
 
             <?php
 
+
             foreach ($db as  $section) {
+                echo "<section class='py-3'>";
 
                 $title = $section['title'];
 
                 $paraghraphs = $section['paragraphs'];
 
-                echo " <h4 class='py-2'> $title </h4>";
+                echo " <h4 class='py-2 fw-bold'> $title </h4>";
 
                 foreach ($paraghraphs as $paragraph) {
-                    echo "<p class='py-1'> $paragraph </p>";
+                    if (strpos($paragraph, '<ol>') !== false) {
+                        echo  $paragraph;
+                    } else {
+                        echo "<p class='py-1'> $paragraph </p>";
+                    }
                 }
+                echo "</section>";
             }
 
             ?>
+
         </div>
 
     </main>
