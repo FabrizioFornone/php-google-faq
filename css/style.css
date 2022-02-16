@@ -1,5 +1,41 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+header a,
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
+header .privacy {
+  width: 300px;
+}
+
+header #profile {
+  width: 30px;
+}
+
+nav ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+nav li {
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+nav a {
+  border-bottom: 2px solid transparent;
+  padding: 10px 0;
+}
+
+nav a:hover {
+  color: #3367d6;
+  border-bottom: 2px solid #3367d6;
+}
+
+hr {
+  margin-top: 10px;
 }
