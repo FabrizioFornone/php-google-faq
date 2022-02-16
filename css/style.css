@@ -1,3 +1,5 @@
+/* Utility Class */
+
 header a,
 nav a {
   color: #000;
@@ -8,6 +10,10 @@ a:hover {
   color: #000;
 }
 
+/* ----- */
+
+/* Header */
+
 header .privacy {
   width: 300px;
 }
@@ -15,6 +21,8 @@ header .privacy {
 header #profile {
   width: 30px;
 }
+
+/* Nav */
 
 nav ul {
   list-style: none;

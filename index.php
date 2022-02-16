@@ -24,27 +24,34 @@ Gestire il “Database” e la visualizzazione di queste
 </head>
 
 <body>
+    <!-- Header -->
     <header class="py-3 px-4">
         <div class="d-flex justify-content-between">
-
             <div class="d-flex align-items-center">
+                <!-- Logo -->
                 <div>
                     <img class="img-fluid" src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
                 </div>
+                <!-- Privacy title -->
                 <div class="px-2 fs-5 fw-bold text-secondary privacy">Privacy e termini</div>
             </div>
             <div class="d-flex align-items-center">
-                <div class="px-3"> <a href="#">
+                <div class="px-3">
+                    <!-- Th icon -->
+                    <a href="#">
                         <i class="fas fa-th"></i>
                     </a>
                 </div>
+                <!-- Profile img -->
                 <div>
                     <img id="profile" src="./img/SI_20190403_185523-modified.png" alt="">
                 </div>
             </div>
         </div>
     </header>
+    <!-- Nav -->
     <nav>
+        <!-- Nav list -->
         <ul class="d-flex">
             <li> <a href="#">Introduzione</a> </li>
             <li> <a href="#">Norme sulla privacy</a> </li>
