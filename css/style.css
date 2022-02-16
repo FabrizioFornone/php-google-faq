@@ -17,13 +17,18 @@ a:hover {
 /* ----- */
 
 /* Header */
+header {
+  height: 100px;
+  background-color: #fff;
+}
 
 header .privacy {
   width: 300px;
+  color: #646568;
 }
 
 header #profile {
-  width: 30px;
+  width: 35px;
 }
 
 /* Nav */
@@ -31,6 +36,7 @@ header #profile {
 nav ul {
   list-style: none;
   margin-bottom: 0;
+  padding-left: 0;
 }
 
 nav li {
@@ -41,6 +47,7 @@ nav li {
 nav a {
   border-bottom: 2px solid transparent;
   padding: 10px 0;
+  color: #646568;
 }
 
 nav a:hover {
@@ -48,11 +55,21 @@ nav a:hover {
   border-bottom: 2px solid #3367d6;
 }
 
-hr {
+hr:not([size]) {
   margin-top: 10px;
+  height: 0.5px;
 }
 
 /* Main */
+
+main {
+  margin-top: 100px;
+}
+
+main .container-custom {
+  width: 900px;
+  margin: 0 auto;
+}
 
 main a {
   color: #3367d6;

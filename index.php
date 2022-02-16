@@ -89,15 +89,15 @@ $db = [
 
 <body>
     <!-- Header -->
-    <header class="py-3 px-4">
-        <div class="d-flex justify-content-between">
+    <header class="fixed-top">
+        <div class="d-flex justify-content-between pt-3 px-4">
             <div class="d-flex align-items-center">
                 <!-- Logo -->
                 <div>
                     <img class="img-fluid" src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
                 </div>
                 <!-- Privacy title -->
-                <div class="px-2 fs-5 text-secondary privacy">Privacy e termini</div>
+                <div class="px-2 fs-5 privacy">Privacy e termini</div>
             </div>
             <div class="d-flex align-items-center">
                 <div class="px-3">
@@ -108,26 +108,28 @@ $db = [
                 </div>
                 <!-- Profile img -->
                 <div>
-                    <img id="profile" src="./img/SI_20190403_185523-modified.png" alt="">
+                    <a href="#">
+                        <img id="profile" src="./img/SI_20190403_185523-modified.png" alt="">
+                    </a>
                 </div>
             </div>
         </div>
-    </header>
-    <!-- Nav -->
-    <nav>
-        <!-- Nav list -->
-        <ul class="d-flex">
-            <li> <a href="#">Introduzione</a> </li>
-            <li> <a href="#">Norme sulla privacy</a> </li>
-            <li> <a href="#">Termini di servizio </a> </li>
-            <li> <a href="#">Tecnologie</a> </li>
-            <li> <a href="#">Domande frequenti</a> </li>
-        </ul>
+        <!-- Nav -->
+        <nav class="pt-3">
+            <!-- Nav list -->
+            <ul class="d-flex fw-bold">
+                <li> <a href="#">Introduzione</a> </li>
+                <li> <a href="#">Norme sulla privacy</a> </li>
+                <li> <a href="#">Termini di servizio </a> </li>
+                <li> <a href="#">Tecnologie</a> </li>
+                <li> <a href="#">Domande frequenti</a> </li>
+            </ul>
+        </nav>
         <hr>
-    </nav>
+    </header>
     <main>
 
-        <div class="container pt-5">
+        <div class="container-custom pt-5">
 
             <?php
 
