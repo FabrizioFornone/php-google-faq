@@ -47,3 +47,14 @@ nav a:hover {
 hr {
   margin-top: 10px;
 }
+
+/* Main */
+
+main a {
+  color: #3367d6;
+  text-decoration: none;
+}
+
+main p {
+  font-size: 15px;
+}
